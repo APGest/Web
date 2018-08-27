@@ -1,0 +1,10 @@
+    <h1>Customers</h1>
+
+<ul>
+  <li *ngFor="let customer of customers$">
+    <a routerLink="/customer/{{customer.id}}">{{customer.name}}</a>
+    <ul>
+      <li>{{customer.surName}}</li>
+    </ul>
+  </li>
+</ul>

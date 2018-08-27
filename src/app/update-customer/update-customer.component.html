@@ -1,0 +1,48 @@
+<ul>
+  <li>
+    <strong>Name: </strong> {{customer.name }}
+  </li>
+  <li>
+    <input type="text" placeholder="{{customer.name}}" class="gredient_input" [(ngModel)]="customer.name" aria-describedby="nameHelp"
+    />
+    <small id="phoneNumberhelp" class="form-text text-muted">Please aneter your NEW Name</small>
+  </li>
+
+
+  <li>
+    <strong>SurName: </strong> {{customer.surName }}
+  </li>
+  <li>
+    <input type="text" placeholder="{{customer.surName}}" class="gredient_input" [(ngModel)]="customer.surName" aria-describedby="surNameHelp"
+    />
+    <small id="phoneNumberhelp" class="form-text text-muted">Please aneter your NEW SurName</small>
+  </li>
+
+
+  <li>
+    <strong>Phone Number: </strong> {{customer.phoneNumber }}</li>
+  <li>
+    <input type="number" placeholder="{{customer.phoneNumber}}" class="gredient_input" [(ngModel)]="customer.phoneNumber" aria-describedby="phoneNumberhelp"
+    />
+    <small id="phoneNumberhelp" class="form-text text-muted">Please aneter your NEW phone number with prefix accurate to your country.</small>
+  </li>
+
+
+  <li>
+    <strong>Address: </strong> {{customer.address }}</li>
+  <li>
+    <input type="text" placeholder="{{customer.address}}" class="gredient_input" [(ngModel)]="customer.address" aria-describedby="addressHelp"
+    />
+    <small id="addressHelp" class="form-text text-muted">Please Enter your NEW address in format: Country,Postal-Code City, st. Name House/Local number. </small>
+  </li>
+
+
+  <div style="float: left;">
+    <a routerLink="/customer/{{customer.id}}">
+      <button type="submit" class="btn btn-primary">Cancle</button>
+    </a>
+  </div>
+  <div style="float: right;">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit(customer.id, customer)">Submit</button>
+  </div>
+</ul>

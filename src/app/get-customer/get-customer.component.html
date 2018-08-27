@@ -1,0 +1,22 @@
+<h1>{{customer$.name}}</h1>
+
+<ul>
+  <li>
+    <strong>SurName: </strong> {{customer$.surName }}</li>
+  <li>
+    <strong>Phone Number: </strong> {{customer$.phoneNumber }}</li>
+  <li>
+    <strong>Address: </strong> {{customer$.address }}</li>
+  <li>
+    <a routerLink="/">
+      <i class="material-icons">backspace &nbsp;</i>
+    </a>
+    <a routerLink="/deleteCustomer/{{customer$.id}}">
+      <i class="material-icons">delete &nbsp;</i>
+    </a>
+    <a routerLink="/updateCustomer/{{customer$.id}}">
+      <i class="material-icons">update &nbsp;</i>
+    </a>
+
+  </li>
+</ul>
